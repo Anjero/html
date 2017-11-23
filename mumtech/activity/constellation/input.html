@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>星座速配-OKMAMA俱乐部</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="description" content="OKMAMA俱乐部 -- 最权威的母婴平台"/>
+    <meta name="keywords" content="母婴,OKMAMA俱乐部,最权威的母婴平台"/>
+    <link rel="stylesheet" href="../common/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+
+</head>
+<body>
+<div class="main" style="display: block;">
+    <div class="title title1">
+        <div class="input-div">
+            <div><label for="yb">您的生日</label> <input class="birth" id="yb" readonly value="选择"/></div>
+            <div><label for="bb">宝宝生日/预产期</label><input class="birth" id="bb" readonly value="选择"/></div>
+        </div>
+    </div>
+    <div class="btn-join btn-input"></div>
+</div>
+<script src="http://zeptojs.com/zepto.min.js"></script>
+<script src="../common/iscroll.js"></script>
+<script src="../common/touch.js"></script>
+<script src="../common/fx.js"></script>
+<script src="../common/fx.method.js"></script>
+<script src="js/zepto.datepick.js"></script>
+<script src="js/main.js"></script>
+</body>
+<script>
+    Zepto(function ($) {
+        $('.birth').datepicker({
+            format: "MM-dd",
+            yearStart: 2017,
+            yearEnd: 2019
+        });
+    })
+</script>
+</html>

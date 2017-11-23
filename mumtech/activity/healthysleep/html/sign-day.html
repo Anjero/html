@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>签到-白天-健康睡眠打卡</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../../common/reset.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="main sign sign-day">
+        <div class="logo"></div>
+        <div class="header">
+            <div class="time icons">
+                <div class="time-1"></div>
+                <div class="time-2"></div>
+                <div class="time-s"></div>
+                <div class="time-3"></div>
+                <div class="time-4"></div>
+            </div>
+            <!--<div class="time time-day">-->
+                <!--<div class="time-5"></div>-->
+                <!--<div class="time-6"></div>-->
+                <!--<div class="time-7"></div>-->
+                <!--<div class="time-8"></div>-->
+                <!--<div class="time-9"></div>-->
+                <!--<div class="time-0"></div>-->
+            <!--</div>-->
+            <div class="right icons">
+                <div class="sun"></div>
+                <div class="ap"></div>
+            </div>
+        </div>
+        <div class=" join-singin" onclick="javascript:location.href='sign-night.html'"></div>
+
+        <div class="footer">
+            <ul class="mune">
+                <li><i class="icon icon-top icon-index"></i></li>
+                <li><i class="icon icon-top icon-date"></i></li>
+                <li><i class="icon icon-top icon-ranking"></i></li>
+                <li><i class="icon icon-top icon-user "></i></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="../../common/zepto.min.js"></script>
+<script src="../js/healthysleep.js"></script>
+<script>
+    $(".join").click(function () {
+        $(".alert").show();
+    });
+
+    $(".icon").click(function () {
+        $(this).addClass("active");
+    });
+</script>
+</html>

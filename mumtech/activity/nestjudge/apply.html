@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>燕窝品鉴会-OKMAMA俱乐部</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../common/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="act-detail">
+    <img src="images/remark.jpg" style="width: 100%"/>
+    <br/>
+    <div class="pushFORM">
+        <form action="end.html" id="_FORM">
+            <p>
+                <input type="text" id="realname" name="realname" placeholder="姓名" value=""/>
+            </p>
+            <p>
+                <input type="tel" id="babyweek" name="babyweek" placeholder="预产期 - 格式：20171101" value=""/>
+            </p>
+            <p>
+                <input id="mobile" name="mobile" type="tel" placeholder="联系电话" value=""/>
+            </p>
+            <p>
+            <div class="select_join">
+                <select name="other" id="other">
+                    <option value="0" style="color: #ccc">选择场次</option>
+                    <option value="1">10月25日（周三）10:30-11:30</option>
+                    <option value="2">10月25日（周三）14:30-15:30</option>
+                </select>
+            </div>
+            </p>
+            <p id="msg" style="font-size: 14px;color:red;text-align: center;height: 20px;padding-top: 10px">
+                &nbsp;
+            </p>
+            <div class="send" id="send"></div>
+        </form>
+    </div>
+</div>
+</body>
+<script>
+    $("#send").click(function () {
+        var realname = $("#realname").val();
+        var babyweek = $("#babyweek").val();
+        var mobile = $("#mobile").val();
+        var other = $("#other:checked").val();
+
+        if (realname == '') {
+            $("#msg").html("请填写正确的姓名");
+            return;
+        } else {
+            $("#msg").html("");
+        }
+        if (babyweek == '') {
+            $("#msg").html("请填写预产期");
+            return;
+        } else {
+            $("#msg").html("");
+        }
+        if (mobile == '') {
+            $("#msg").html("请填写手机号");
+            return;
+        } else {
+            $("#msg").html("");
+        }
+        if (other == '0') {
+            $("#msg").html("请选择参与场次");
+            return;
+        } else {
+            $("#msg").html("");
+        }
+        $("#_FORM").submit();
+
+    })
+</script>
+</html>

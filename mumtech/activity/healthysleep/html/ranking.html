@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>签到-白天-健康睡眠打卡</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../../common/reset.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="main ranking">
+        <div class="logo"></div>
+        <div class="top">
+            <div class="avator">
+                <img class="circular" src="../images/signin/bg-night.jpg"/>
+            </div>
+            <div class="ranking-num">
+                今日排名：第1名
+            </div>
+        </div>
+        <div class="ranking-check">
+            <ul>
+                <li class="active">日排名</li>
+                <li>周排名</li>
+            </ul>
+        </div>
+
+        <div class="list">
+            <div class="user">
+                1.<img src="../images/signin/bg-night.jpg"/> OKMAMA
+                <div>10天<br/>健康睡觉</div>
+            </div>
+            <div class="user">
+                2.<img src="../images/signin/bg-night.jpg"/> OKMAMA
+                <div>10天<br/>健康睡觉</div>
+            </div>
+        </div>
+        <div class="footer">
+            <ul class="mune">
+                <li><i class="icon icon-top icon-index"></i></li>
+                <li><i class="icon icon-top icon-date"></i></li>
+                <li><i class="icon icon-top icon-ranking"></i></li>
+                <li><i class="icon icon-top icon-user "></i></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="../../common/zepto.min.js"></script>
+<script src="../js/healthysleep.js"></script>
+<script>
+    $(".join").click(function () {
+        $(".alert").show();
+    });
+
+    $(".icon").click(function () {
+        $(this).addClass("active");
+    });
+</script>
+</html>

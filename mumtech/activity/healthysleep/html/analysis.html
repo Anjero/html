@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>健康睡眠打卡</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../../common/reset.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="main analysis">
+        <div class="content">
+            <div class="logo"></div>
+            <div class="top">
+                <div class="left"><img class="circular" src="../images/signin/bg-night.jpg"/>
+                    <div class="nickname">Anjero</div>
+                </div>
+                <div class="right"><h2 class="ht">我已健康</h2>
+                    <h2>睡眠 <span>00</span> 天</h2></div>
+            </div>
+            <div class="remark">
+
+                <h3>okmama提示：</h3>
+                <p>孕期是一段非常美妙的人生体验 <br/>
+                    但同时也伴随着不适和紧张<br/>
+                    但同时也伴随着不适和紧张</p>
+            </div>
+            <div class="chart">
+                <h3>睡眠折线图</h3>
+                <div class="cc"></div>
+            </div>
+            <div class="share-msg">分享到朋友圈，额外得积分！成功邀请朋友参加更有积分奖励！</div>
+            <div class="title"></div>
+        </div>
+    </div>
+
+</div>
+</body>
+
+<script src="../../common/zepto.min.js"></script>
+<script src="../js/healthysleep.js"></script>
+<script>
+    $(".join").click(function () {
+        $(".alert").show();
+    });
+
+    $(".see-detail").click(function () {
+        alert("show detai!");
+    });
+</script>
+</html>

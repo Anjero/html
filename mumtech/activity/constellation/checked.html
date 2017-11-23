@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>星座速配-OKMAMA俱乐部</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="OKMAMA俱乐部 -- 最权威的母婴平台"/>
+    <meta name="keywords" content="母婴,OKMAMA俱乐部,最权威的母婴平台"/>
+    <link rel="stylesheet" href="../common/reset.css">
+    <link rel="stylesheet" href="css/style.css?v=3">
+    <link rel="stylesheet" href="css/datepicker.css">
+</head>
+<body>
+
+<div class="main" id="p3" style="z-index: 666;">
+    <div class="logo"></div>
+    <div class="back" id="back3"></div>
+    <div class="title title-exp">
+        <div class="exp-top"></div>
+        <div class="exp-score" id="score">90</div>
+        <div class="exp-star" id="i-star"></div>
+        <div class="exp-cm">
+            <i class="cm cm-mm-by" id="mm-icon"></i>
+            <i class="cm cm-and"></i>
+            <i class="cm cm-bb-by" id="bb-icon"></i>
+        </div>
+    </div>
+    <div class="btn-join btn-exp" id="btn-exp"></div>
+</div>
+
+<div class="main" id="p4">
+    <div class="logo"></div>
+    <div class="back" id="back4"></div>
+    <div class="content">
+        <div class="content-container" id="container">
+            <div class="content-d" id="d-mm">
+                <div class="content-title" id="mm-title"></div>
+                <div class="remark" id="mm-desc"></div>
+                <div class="touch-msg left">
+                </div>
+            </div>
+            <div class="content-d" style="display: none" id="d-bb">
+                <div class="content-title" id="bb-title"></div>
+                <div class="remark" id="bb-desc"></div>
+                <div class="touch-msg right">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="other">
+        <div class="best-match">白羊座妈妈最佳匹配宝宝:射手座宝宝</div>
+        <!--<div class="share-msg">点击右上角分享，查看白羊座妈妈其他匹配报告</div>-->
+    </div>
+    <div class="foot">
+        <div class="qrcode">
+            <img src="images/qrcode.png"/>
+        </div>
+    </div>
+
+    <i class="icon-cm icon-left icon-by"></i>
+    <i class="icon-cm icon-right icon-by"></i>
+</div>
+</body>
+
+<script src="http://zeptojs.com/zepto.min.js"></script>
+<script src="../common/touch.js"></script>
+<script src="../common/iScroll.js?v=2"></script>
+<script src="../common/fx.js"></script>
+<script src="../common/fx.method.js"></script>
+<script src="js/zepto.datepick.js?v=2"></script>
+<script src="js/main.js?v=1"></script>
+<script>
+    Zepto(function ($) {
+        cmShow("by", "by");
+    });
+</script>
+</html>

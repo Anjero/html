@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>健康睡眠打卡</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../../common/reset.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="main index">
+        <div class="logo"></div>
+        <div class="slogan"><div class="see-detail">查看活动细则</div></div>
+
+        <div class="join"></div>
+        <div class="cloud"></div>
+    </div>
+
+    <div class="alert">
+        <div class="alert-b">
+        </div>
+        <div class="alert-m">
+            <img src="../images/index/qrcode.png"/>
+            <div class="btn" onclick="javascript:location.href='sign-day.html'"></div>
+            <div class="msg" >注：关注公众号参与活动</div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="../../common/zepto.min.js"></script>
+<script src="../js/healthysleep.js"></script>
+<script>
+    $(".join").click(function () {
+        $(".alert").show();
+    });
+
+    $(".see-detail").click(function () {
+        alert("show detai!");
+    });
+</script>
+</html>

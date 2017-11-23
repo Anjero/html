@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OKMAMA</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="http://zeptojs.com/zepto.min.js"></script>
+</head>
+<body>
+<div class="p1">
+    <div style="z-index: 999">
+        <img src="images/apply/top.jpg" style="width: 100%" align="">
+
+    </div>
+    <div style="height: 50px;z-index: 1">
+
+    </div>
+</div>
+<div class="foot">
+    <div class="f1"></div>
+    <div class="f2"></div>
+    <div class="f3"></div>
+    <div class="f4"></div>
+</div>
+<script>
+    $(".send").click(function () {
+        var realname = $("#realname").val();
+        var babyweek = $("#babyweek").val();
+        var address = $("#address").val();
+        var mobile = $("#mobile").val();
+        if (realname == '') {
+            $("#msg").html("请填写正确的姓名");return;
+        } else {
+            $("#msg").html("");
+        }
+        if (babyweek == '') {
+            $("#msg").html("请填写预产期");return;
+        } else {
+            $("#msg").html("");
+        }
+        if (mobile == '') {
+            $("#msg").html("请填写手机号");return;
+        } else {
+            $("#msg").html("");
+        }
+        if (address == '') {
+            $("#msg").html("请填写地址以便奖品寄出");return;
+        } else {
+            $("#msg").html("");
+        }
+        $("#_FORM").submit()
+    });
+</script>
+</body>
+</html>

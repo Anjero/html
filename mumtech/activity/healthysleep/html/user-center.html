@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>健康睡眠打卡</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../../common/reset.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="main user-center">
+        <div class="header">
+            <div class="left">
+                <img class="circular" src="../images/signin/bg-night.jpg"/>
+                <div class="nickname">Anjero</div>
+            </div>
+            <div class="right">
+                <div class="detail">
+                    <i class="icon-user icon-user-detail"></i>
+                    <i class="icon-user icon-user-right"></i>
+                    <i class="icon-user icon-user-100"></i>
+                </div>
+                <div class="center-msg">完善个人资料免费送积分</div>
+            </div>
+        </div>
+        <div class="list">
+            <a href="#">
+                <div class="list-link">我的积分
+                    <div class="icon-user icon-user-right2"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="list-link">积分兑换
+                    <div class="icon-user icon-user-right2"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="list-link">我的勋章
+                    <div class="icon-user icon-user-right2"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="list-link">活动细则
+                    <div class="icon-user icon-user-right2"></div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="list-link list-end">关于积分
+                    <div class="icon-user icon-user-right2"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>
+</body>
+
+<script src="../../common/zepto.min.js"></script>
+<script src="../js/healthysleep.js"></script>
+<script>
+    $(".join").click(function () {
+        $(".alert").show();
+    });
+
+    $(".see-detail").click(function () {
+        alert("show detai!");
+    });
+</script>
+</html>

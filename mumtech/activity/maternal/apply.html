@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>mikihouse-OKMAMA</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../common/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://zeptojs.com/zepto.min.js"></script>
+</head>
+<body class="act-detail">
+<img src="images/logo.png" class="logo"/>
+<div class="act-d" style="padding-bottom: 30px">
+    <img src="images/apply.png" class="index-remark"/>
+    <br/>
+    <div class="pushFORM">
+        <form action="end.html" id="_FORM">
+            <input value="${other}" type="hidden" name="other">
+            <p>
+                <input type="text" id="realname" name="realname" placeholder="姓名" value=""/>
+            </p>
+            <p>
+                <input type="tel" id="babyweek" name="babyweek" placeholder="预产期 - 格式：20171101" value=""/>
+            </p>
+            <p>
+                <input id="mobile" name="mobile" type="tel" placeholder="联系电话" value=""/>
+            </p>
+            <p>
+            </p>
+            <p id="msg" style="font-size: 14px;color:red;text-align: center;height: 20px;padding-top: 10px">
+                &nbsp;
+            </p>
+            <div class="send" id="send"></div>
+        </form>
+    </div>
+    <script>
+        $("#send").click(function () {
+            var realname = $("#realname").val();
+            var babyweek = $("#babyweek").val();
+            var mobile = $("#mobile").val();
+
+            if (realname == '') {
+                $("#msg").html("请填写正确的姓名");
+                return;
+            } else {
+                $("#msg").html("");
+            }
+            if (babyweek == '') {
+                $("#msg").html("请填写预产期");
+                return;
+            } else {
+                $("#msg").html("");
+            }
+            if (mobile == '') {
+                $("#msg").html("请填写手机号");
+                return;
+            } else {
+                $("#msg").html("");
+            }
+            $("#_FORM").submit();
+
+        });
+    </script>
+</div>
+</body>
+</html>

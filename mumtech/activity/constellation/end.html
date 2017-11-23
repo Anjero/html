@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>星座速配-OKMAMA俱乐部</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="OKMAMA俱乐部 -- 最权威的母婴平台"/>
+    <meta name="keywords" content="母婴,OKMAMA俱乐部,最权威的母婴平台"/>
+    <link rel="stylesheet" href="../common/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<div class="main" style="display: block">
+    <div class="logo"></div>
+    <div class="content">
+        <div class="content-container" id="container">
+            <div class="content-d" id="d-mm">
+                <div class="content-title" id="mm-title"></div>
+                <div class="remark" id="mm-desc"></div>
+                <div class="touch-msg left">
+                </div>
+            </div>
+            <div class="content-d" style="display: none" id="d-bb">
+                <div class="content-title" id="bb-title"></div>
+                <div class="remark" id="bb-desc"></div>
+                <div class="touch-msg right">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="other">
+        <div class="best-match">白羊座妈妈最佳匹配宝宝:射手座宝宝</div>
+        <div class="share-msg">点击右上解分享，查看白羊座妈妈其他匹配报告</div>
+    </div>
+    <div class="foot">
+        <div class="qrcode">
+            <img src="images/qrcode.png"/>
+        </div>
+    </div>
+
+    <i class="icon-cm icon-left icon-by"></i>
+    <i class="icon-cm icon-right icon-by"></i>
+</div>
+<script src="http://zeptojs.com/zepto.min.js"></script>
+<script src="../common/touch.js"></script>
+<script src="../common/iscroll.js?v=1"></script>
+<script src="../common/fx.js"></script>
+<script src="../common/fx.method.js"></script>
+<script src="js/zepto.datepick.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+    $("#d-mm").swipeLeft(function () {
+        $("#d-mm").hide();
+        $("#d-bb").show('slow');
+    });
+    $("#d-bb").swipeRight(function () {
+        $("#d-bb").hide();
+        $("#d-mm").show('slow');
+    });
+</script>
+</body>
+</html>

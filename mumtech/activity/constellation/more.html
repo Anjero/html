@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>星座速配-OKMAMA俱乐部</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="description" content="OKMAMA俱乐部 -- 最权威的母婴平台"/>
+    <meta name="keywords" content="母婴,OKMAMA俱乐部,最权威的母婴平台"/>
+    <link rel="stylesheet" href="../common/reset.css">
+    <link rel="stylesheet" href="css/style.css?v=3">
+    <link rel="stylesheet" href="css/datepicker.css">
+</head>
+<body>
+<div class="main" id="p2">
+    <div class="logo"></div>
+    <div class="check-bb">
+        <div class="icon2 icon2-sp " id="icon2" data-content="sp"></div>
+        <div class="icon2 icon2-by " data-content="by"></div>
+        <div class="icon2 icon2-jn " data-content="jn"></div>
+        <div class="icon2 icon2-sz " data-content="sz"></div>
+        <div class="icon2 icon2-jx " data-content="jx"></div>
+        <div class="icon2 icon2-szi" data-content="szi"></div>
+        <div class="icon2 icon2-cn " data-content="cn"></div>
+        <div class="icon2 icon2-tp " data-content="tp"></div>
+        <div class="icon2 icon2-tx " data-content="tx"></div>
+        <div class="icon2 icon2-ss " data-content="ss"></div>
+        <div class="icon2 icon2-mj " data-content="mj"></div>
+        <div class="icon2 icon2-sy " data-content="sy"></div>
+        <div class="ck-text" id="more-ck-mm" data-content="by">白羊妈妈</div>
+    </div>
+    <div class="ck-title"></div>
+</div>
+</body>
+
+<script src="http://zeptojs.com/zepto.min.js"></script>
+<script src="../common/touch.js"></script>
+<script src="../common/iScroll.js?v=2"></script>
+<script src="../common/fx.js"></script>
+<script src="../common/fx.method.js"></script>
+<script src="js/zepto.datepick.js?v=2"></script>
+<script src="js/main.js?v=1"></script>
+<script>
+    Zepto(function ($) {
+        readMM("cn")
+
+
+        initMore();
+
+        $(".icon2").on("click", function () {
+            var bbcm = $(this).attr("data-content");
+            var mmcm = $(".ck-text").attr("data-content");
+            location.href = 'checked.html?utm_source=${utm_source}&utm_medium=${utm_medium}&utm_campaign=cm&mmcm=' + mmcm + '&bbcm=' + bbcm;
+        });
+    });
+</script>
+</html>
