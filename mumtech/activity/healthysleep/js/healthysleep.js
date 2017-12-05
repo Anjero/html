@@ -4,6 +4,10 @@ Zepto(function ($) {
     console.log(height + "-" + width);
     // $(".container").height(height);
 
+
+    $(".close").click(function () {
+        $(this).parent().hide();
+    });
 });
 
 

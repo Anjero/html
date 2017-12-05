@@ -1,12 +1,15 @@
 $default_color: #F27F9A;
 $day1: #F27F9A;
 $day2: #F3B96B;
-$day3: #ECDDB7;
+//$day3: #ECDDB7;
+$day3: #F05A28;
 $day4: #F5917B;
 $day5: #2E9D89;
 $day6: #72C7AE;
 $day7: #996FB0;
+$gray: #E6E7E8;
 $version: 1;
+* {border-radius: 0;}
 html, body { width: 100%;height: 100%;font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "宋体";}
 .container, .alert, .alert-m, .alert-b { width: 100%;height: 100%;}
 .main {height: 100%;width: 100%;position: relative;}
@@ -18,59 +21,65 @@ html, body { width: 100%;height: 100%;font-family: "Microsoft YaHei", Arial, Hel
 .join-singin {background: url("../images/signin/signin.png?v=1") no-repeat top center;}
 .join, .join-singin {background-size: 100% auto;position: absolute;bottom: 70px;left: 15%;width: 70%;height: 30%;}
 .join {width: 50%;left: 25%;bottom: 30px;}
-.alert {z-index: 100;position: absolute;top: 0;left: 0;text-align: center;display: none;}
+.alert {z-index: 100;position: absolute;top: 0;left: 0;text-align: center;display: none;
+  .load {background: url("../images/loading4.gif") no-repeat center center;height: 10%;background-size: 10% auto;margin-top: 50%;}
+}
 .alert-b {z-index: 99;background-color: #0b0b0b;opacity: 0.8;position: absolute;}
 .alert-m {z-index: 100;position: relative;padding-top: 30%;height: 70%;
   img { width: 70%; }
   .btn {height: 80px;background: url("../images/index/btn.png") no-repeat center center;background-size: 70% auto;}
   .msg {text-align: center;color: white;}
 }
-.time-0, .time-1, .time-2, .time-3, .time-4, .time-5, .time-6, .time-7, .time-8, .time-9, .time-s, .sun, .am-pm, .ap {width: 38px;height: 100%;float: left;background: url("../images/icons.png?v=2") no-repeat center center;background-size: 2600%;}
-.time-0 {background-position-x: -8px;}
-.time-1 {background-position-x: -48px;}
-.time-2 {background-position-x: -88px;}
-.time-3 {background-position-x: -128px;}
-.time-4 {background-position-x: -168px;}
-.time-5 {background-position-x: -208px;}
-.time-6 {background-position-x: -248px;}
-.time-7 {background-position-x: -288px;}
-.time-8 {background-position-x: -328px;}
-.time-9 {background-position-x: -368px;}
-.time-s {background-position-x: -408px;}
+.icon {background: url("../images/icons.png?v=7") no-repeat left top; background-size: auto 380%}
+.time-0, .time-1, .time-2, .time-3, .time-4, .time-5, .time-6, .time-7, .time-8, .time-9, .time-s, .sun, .am-pm, .ap {width: 44px;height: 100%;float: left;}
+.time-s {width: 24px;}
+.time-0 {background-position-x: 0.8%;}
+.time-1 {background-position-x: -56px;}
+.time-2 {background-position-x: 9.2%;}
+.time-3 {background-position-x: 13.4%;}
+.time-4 {background-position-x: -196px;}
+.time-5 {background-position-x: -246px;}
+.time-6 {background-position-x: -292px;}
+.time-7 {background-position-x: -340px;}
+.time-8 {background-position-x: -388px;}
+.time-9 {background-position-x: -436px;}
+.time-s {background-position-x: -494px;}
 .sign {text-align: center;
-  .header { height: 70px; position: relative;width: 260px;padding-top: 20%;margin: 0 auto; }
+  .header { height: 72px; position: relative;width: 280px;padding-top: 20%;margin: 0 auto; }
   .time, .right {float: left;}
-  .time {width: 190px;height: 80%;padding-top: 20px;position: relative;bottom: 0;}
+  .time {width: 200px;height: 94%;padding-top: 10px;position: relative;bottom: 0;}
   .right {height: 100%;width: 70px;position: relative;;
-    .sun {height: 86px;width: 86px;top: -40px;left: -13px;position: absolute;background-size: 1900%;}
-    .ap {height: 30px;width: 50px;left: 0;bottom: -0;position: absolute;background-size: 1800%;}
+    .sun {height: 86px;width: 86px;top: -34px;left: -13px;position: absolute;}
+    .ap {height: 50px;width: 50px;left: 0;bottom: -0;position: absolute;}
   }
 }
 .sign-day {background: url("../images/signin/bg.jpg") no-repeat center center;background-size: 100% 100%;
   .icons {
-    div {background-position-y: -7px;}
+    div {background-position-y: 3%;}
   }
   .right {
-    .sun {background-position-x: -750px;}
-    .ap {background-position-x: -524px;background-position-y: -24px}
+    .sun {background-position-x: 48.5%;background-position-y: 0%;}
+    .ap {background-position-x: 62%;background-position-y: 3%}
   }
 }
-.sign-night {background: url("../images/signin/bg-night.jpg") no-repeat center center;background-size: 100% 100%;
+.sign-night {background: url("../images/signin/bg-night.jpg") no-repeat center center;background-size: 101% 101%;
   .icons {
-    > div {background-position-y: -66px;}
+    > div {background-position-y: -76px;}
   }
   .right {
-    .sun {background-position-y: -111px;background-position-x: -748px;}
-    .ap {background-position-x: -524px;background-position-y: -68px}
+    .sun {background-position-y: 42%;background-position-x: 49%;}
+    .ap {background-position-x: 62%;background-position-y: 42%;bottom: -14px;}
   }
   .night-bg {
     background: url("../images/share/star-27.png") no-repeat center center;background-size: 100% auto;
-    .logo {
-      height: 60px;background-position: right;
-    }
   }
 }
-.footer {position: absolute;width: 100%;height: 60px;bottom: 0;background-color: white;z-index: 98;
+.night-bg {
+  .logo {
+    height: 70px;background-position: right;background-size: auto 70%;
+  }
+}
+.footer {position: fixed;width: 100%;height: 60px;bottom: 0;background-color: white;z-index: 98;border-top: 1px solid $gray;
   ul {
     li {float: left;width: 25%; height: 100%; text-align: center;
       i { padding: 28px 26px;display: inline-block; }
@@ -78,30 +87,12 @@ html, body { width: 100%;height: 100%;font-family: "Microsoft YaHei", Arial, Hel
     }
   }
 }
-.icon {background: url("../images/icons.png?v=1") no-repeat center center;}
 .icon-top {background-size: 2000%;background-position-y: -70px;}
 .icon-index {background-position-x: -674px;}
 .icon-date {background-position-x: -775px;}
 .icon-ranking {background-position-x: -877px;}
 .icon-user {background-position-x: -980px;}
 .circular {border-radius: 50%;}
-.ranking {
-  .avator { text-align: center;width: 100%;
-    img {width: 100%;text-align: center;vertical-align: middle;max-height: 100%;width: 80px;height: 80px;}
-  }
-  .list {
-    .user {
-      img {width: 50px;height: 50px;}
-    }
-  }
-  .ranking-num {text-align: center;}
-  .ranking-check {text-align: center;width: 100%;position: relative;height: 10%;margin-top: 20px;
-    ul { color: $default_color;font-size: 24px;font-weight: 300;margin: 0 auto;border: 2px solid $default_color;display: table;border-radius: 8px;line-height: 150%;
-      li {float: left;width: 120px}
-      .active {background-color: $default_color;color: white;}
-    }
-  }
-}
 .share-1 {
   .top {background: url("../images/share/top1.png") no-repeat center top;background-position-y: -2px}
   .text {background: url("../images/share/text1.png") no-repeat left bottom;margin-left: 8%;
@@ -177,13 +168,24 @@ html, body { width: 100%;height: 100%;font-family: "Microsoft YaHei", Arial, Hel
     }
     .time {width: 60%;float: left;height: 110px;position: relative;
       div {margin-top: 40px;height: 56px; background-position-y: -66px;}
-
+      .time-s { width: 30px;
+        background-position-y: -66px; background-position-x: -404px;}
+      .time-0 {background-position-x: 0.3%;}
+      .time-1 {background-position-x: 4.4%;}
+      .time-2 {background-position-x: 8.9%;}
+      .time-3 {background-position-x: 13%;}
+      .time-4 {background-position-x: 17.2%;}
+      .time-5 {background-position-x: 21.6%;}
+      .time-6 {background-position-x: 25.7%;}
+      .time-7 {background-position-x: 30.1%;}
+      .time-8 {background-position-x: 34.4%;}
+      .time-9 {background-position-x: 38.7%;}
     }
   }
   .rking {text-align: center;color: white;opacity: 0.7;letter-spacing: 1px;font-size: 14px;font-weight: 300;}
   .text {background-size: auto 100%;height: 145px;margin-top: 10px;
     .time {width: 60%;float: left;height: 110px;position: relative;
-      div {margin-top: 85px;height: 56px; background-position-y: -7px;margin-left: 0px;}
+      div {margin-top: 88px;height: 58px; background-position-y: -7px;margin-left: 0px;}
 
       .time-0, .time-1, .time-2, .time-3, .time-4, .time-5, .time-6, .time-7, .time-8, .time-9 {background: url("../images/share/nums.png") no-repeat left top;background-size: auto 100%;background-position-y: 0px;}
       .time-0 {background-position-x: -4px;}
@@ -204,12 +206,14 @@ html, body { width: 100%;height: 100%;font-family: "Microsoft YaHei", Arial, Hel
     width: 90%;margin: 0 auto;height: 25%;position: relative;
     .content {width: 60%;position: absolute;left: 0;bottom: 0;
       h3 {font-size: 16px;font-weight: bold;}
-      p {font-size: 14px;font-weight: 200;padding-top: 5px;line-height: 18px;}
+      p {font-size: 13px;font-weight: 200;padding-top: 5px;line-height: 18px;}
     }
     .qrcode {width: 100px;height: 120px;position: absolute;right: 0;bottom: 0;}
     img {width: 100%;height: 100%;}
   }
 }
+.share-3 .header .time div {background-position-y: -148px;}
+.share-3 .header .time .time-s {background-position-y: -114px;}
 .tree { background: url("../images/trees.png") no-repeat center center;background-size: auto 200%;width: 100px;height: 150px;position: absolute;bottom: 120px;}
 .tree-1 {background-position-x: -250px; background-position-y: 36px;}
 .tree-2 {background-position-x: -364px; background-position-y: 28px;}
@@ -236,11 +240,11 @@ html, body { width: 100%;height: 100%;font-family: "Microsoft YaHei", Arial, Hel
   .remark {height: 14%;width: 90%;margin: 0 auto;
 
     h3 {font-size: 16px;font-weight: bold;}
-    p {font-size: 14px;font-weight: 200;padding-top: 5px;line-height: 18px;}
+    p {font-size: 13px;font-weight: 200;padding-top: 5px;line-height: 18px;}
 
   }
-  .chart {height: 30%;width: 90%;margin: 0 auto;
-    h3 {font-size: 14px;font-weight: bold;height: 10%;}
+  .chart {height: 25%;width: 90%;margin: 0 auto;
+    h3 {font-size: 14px;font-weight: bold;height: 10%;padding-bottom: 4px;}
     .cc {background-color: white;height: 90%;}
   }
   .share-msg {font-size: 12px;opacity: 0.6;padding: 10px 0;text-align: center;font-weight: 100;}
@@ -248,30 +252,164 @@ html, body { width: 100%;height: 100%;font-family: "Microsoft YaHei", Arial, Hel
 }
 .nickname {padding-top: 4px;}
 //用户中心
-.user-center {background-color: #E6E7E8;padding-top: 6%;height: 95%;
+.user-center {background-color: $gray;padding-top: 6%;height: 97%;
   .header {background-color: $default_color;height: 30%;padding: 0 5%;position: relative;color: white;
     img {width: 90px;height: 90px;background-color: white;padding: 3px;vertical-align: middle}
     .left {float: left;width: 40%;height: 80%;text-align: center;margin-top: 10%;}
     .right {float: right;width: 60%;;padding-top: 20%;text-align: right;
     }
   }
-  .detail {height: 40px}
-  .icon-user {padding: 10px 15px;background: url("../images/icon-user.png") no-repeat center center;background-size: auto 100%; }
-  .icon-user-detail {background-position-x: -5px;background-position-y: -2px;}
+  .detail {height: 40px;
+    h3 {font-size: 20px;line-height: 30px}
+    h4 {font-size: 14px;line-height: 20px;font-weight: 100;
+      .icon-user-right2 {width: 20px;height: 20px;background-position-x: -20px;}
+    }
+  }
+  .icon-user {padding: 10px 15px;background: url("../images/icon-user.png?v=6") no-repeat center center;background-size: auto 100%; }
+  .icon-user-detail {background-position-x: -3px;background-position-y: -2px;padding: 6px 15px;}
   .icon-user-right {background-position-x: -43px;background-position-y: 0px;}
-  .icon-user-right2 {background-position-x: -148px;background-position-y: 0px;float: right;padding: 0;width: 42px;height: 42px;}
-  .icon-user-100 {background-position-x: -88px;background-position-y: -2px;padding: 10px 20px;}
+  .icon-user-profile {background-position-x: 97.1%;}
+  .icon-user-right2 {background-position-x: -148px;background-position-y: 0px;float: right;padding: 0;width: 40px;height: 40px;}
+  .icon-user-100 {background-position-x: -76px;background-position-y: -2px;padding: 10px 20px;}
 
   .center-msg {
-    font-size: 12px;opacity: 0.7;font-weight: 100;
+    font-size: 12px;opacity: 0.7;font-weight: 100;top: 0;right: 45px;position: absolute;
   }
 
   .list {
     margin-top: 6%;background-color: white;
-    .list-link {;border-bottom: 1px solid #E6E7E8;font-size: 18px;margin-left: 20px;color: $default_color;line-height: 42px;font-weight: 300;
+    .list-link {;border-bottom: 1px solid #E6E7E8;font-size: 16px;margin-left: 8px;color: $default_color;line-height: 40px;font-weight: 300;position: relative;
     }
     .list-end {border: 0;}
     a {color: $default_color;text-decoration: none;}
   }
 }
+//排行榜
+.ranking {
+  background-color: $gray;color: $default_color;
+  .user {
+    margin: 10px 0px;padding: 0 10px;
+    background-color: white;;line-height: 60px;
+    img {vertical-align: middle;margin: 0 6px;}
+  }
+  .user-detail {position: absolute;line-height: 20px;padding-top: 10px;text-align: center;right: 10px;}
+}
+.ranking {
+  .avator { text-align: center;width: 100%;
+    img {width: 100%;text-align: center;vertical-align: middle;max-height: 100%;width: 80px;height: 80px;}
 
+  }
+  .list {
+    padding-bottom: 80px;background-color: #E6E7E8;
+    .nickname {float: left;width: 50%;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;padding-top: 0;}
+    .user {
+      height: 60px;position: relative;;
+      .title {float: left;}
+      img {width: 50px;height: 50px;}
+    }
+  }
+  .ranking-num {text-align: center;padding: 20px;}
+  .ranking-check {text-align: center;width: 100%;position: relative;height: 16%;padding-top: 20px;
+    ul { color: $default_color;font-size: 24px;font-weight: 300;margin: 0 auto;border: 2px solid $default_color;display: table;border-radius: 8px;line-height: 150%;
+      li {float: left;width: 120px}
+      .active {background-color: $default_color;color: white;}
+    }
+  }
+}
+.ck-button {
+  width: 30%;background-color: white;color: $default_color;padding: 8px 0;font-size: 14px;font-weight: 500;margin: 30% 5px 0 5px;border-radius: 8px;border: none;
+}
+.pregnant, .notpregnant {width: 80%;margin: 30% auto 0 auto;background-color: white;color: $default_color;border-radius: 8px;display: none;
+  h2, h3 {padding: 15px;}
+  h2 {text-align: left;}
+  h3, p {text-align: center;}
+  p {font-size: 14px;}
+  .pre-date {margin: 8px;border: 0;border-bottom: 1px solid $default_color;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 200;color: $default_color;
+  }
+}
+.calendar {
+  color: $default_color;
+  .header {height: 170px;background-color: $default_color;color: white;
+    .today {width: 75%;text-align: center;
+      .byday {font-size: 120px;line-height: 100px;padding-top: 40px;}
+      .byweek {font-size: 20px;}
+    }
+  }
+  .date {height: 20%}
+  .month {font-size: 20px;padding: 10px 0;text-align: center;line-height: 200%;border-top: 2px solid $default_color;}
+  .week, .days {width: 98%;margin: 0 auto;min-height: 28%}
+  .week {border-top: 1px solid $default_color;
+    border-bottom: 1px solid $default_color;padding: 8px 0;width: 100%;position: relative;}
+  .week-day {
+    height: 100%;line-height: 16px;position: relative;height: 32px;
+    span {font-size: 12px;}
+    div {width: 14%;text-align: center;float: left;font-size: 16px;}
+  }
+  .days {
+    .day {width: 14%;float: left;text-align: center;line-height: 200%;;}
+    .active {background: url("../images/icons.png?v=7") no-repeat left top;background-size: auto 300%;background-position-x: 48.9%;background-position-y: 100%;}
+  }
+  .logo {
+    background-size: 100% auto;position: absolute;right: 0;top: 10px;width: 30%;height: 20%;background-position: right top;
+  }
+}
+.icon-user-integral, .icon-user-about, .icon-user-medal, .icon-user-exchange, .icon-user-rules, .icon-user-profile {
+  background-size: auto 600%;padding: 8px 20px;background-position-x: 62%;background-position-y: 93.2%;
+}
+.icon-user-integral {background-position-x: 62.5%;}
+.icon-user-about {background-position-x: 69.1%;;}
+.icon-user-medal {background-position-x: 76.5%;}
+.icon-user-exchange {background-position-x: 83.6%;}
+.icon-user-rules {background-position-x: 90.6%;}
+.user-profile {;text-align: left;background-color: white;z-index: 100;position: absolute;width: 80%;left: 10%;top: 30%;border-radius: 8px;
+  color: $default_color;padding-top: 10px;
+  lable {width: 30%;}
+  .input-profile {font-size: 16px;line-height: 32px;padding: 6px 10px;
+    input {border: 0;border-radius: 0;height: 28px;padding: 0 8px;font-size: 16px;width: 70%;}
+  }
+}
+.join-singin-button {background-color: $default_color;color: white;width: 100%;font-size: 18px;border-radius: 0 0 8px 8px;border: 0;line-height: 40px;margin: 10px 0 0 0;}
+.profile-msg {color: red;text-align: center;font-size: 14px;height: 32px;}
+.integral {
+  background-color: $gray;height: auto;
+  padding-bottom: 60px;
+  .list {
+    .detail {padding: 5px 0;background-color: white;height: 60px;position: relative;margin: 16px 0;
+      .icon-user-integral {position: absolute;top: 5px;height: 30px;left: 10px;}
+      h3 {color: $default_color;font-size: 18px;padding: 6px 0;font-weight: 200;}
+      p {color: #ccc;font-size: 12px;}
+      .left {position: absolute;left: 60px;height: 80%;top: 16%;}
+      .right {position: absolute;right: 20px;height: 80%;top: 16%;;}
+    }
+  }
+}
+.integral, .medal {
+  .title {
+    font-size: 28px;color: white;background-color: $default_color;line-height: 100px;text-align: center;letter-spacing: 4px;
+  }
+}
+.medal {
+  .icon-medals {
+    width: 33.3%;height: 200px;background: url("../images/medals.png") no-repeat center center;background-size: auto 100%;float: left;
+  }
+  .icon-medals-active {
+    background-position-x: -8%;
+  }
+  .icon-medals-hide {
+    background-position-x: 110%;
+  }
+}
+.close {
+  position: fixed;width: 20px;height: 20px;background: url("../images/close.png?v=1") no-repeat center center;background-size: 100%;right: 10px;top: 10px;
+}
+.integral-remark {
+  color: $default_color;background-color: white;padding-top: 5%;width: 80%;position: absolute;top: 10%;z-index: 999;border-radius: 8px;left: 10%;
+  h3 {font-size: 16px;text-align: center;padding: 10px;font-weight: bold;}
+
+  p {text-align: left;padding: 5px 10px;font-size: 14px;line-height: 22px;font-weight: 300;}
+
+}
+.analysis-msg {color: $default_color;line-height: 400%;text-align: center;font-size: 14px;}

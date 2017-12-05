@@ -10,31 +10,26 @@
 </head>
 <body>
 <div class="container">
-    <div class="main sign sign-day">
-
-        <div class="night-bg">
-            <div class="logo"></div>
-            <div class="header">
-                <div class="time icons">
-                    <div class="icon time-1"></div>
-                    <div class="icon time-2"></div>
-                    <div class="icon time-s"></div>
-                    <div class="icon time-3"></div>
-                    <div class="icon time-4"></div>
-                </div>
-                <div class="right icons">
-                    <div class="icon sun"></div>
-                    <div class="icon ap"></div>
-                </div>
-            </div>
+    <div class="main medal">
+        <div class="title">
+            勋章墙
         </div>
-        <div class=" join-singin"></div>
 
+        <div class="list">
+            <div class="icon-medals icon-medals-active"></div>
+            <div class="icon-medals icon-medals-hide"></div>
+            <div class="icon-medals icon-medals-hide"></div>
+            <div class="icon-medals icon-medals-hide"></div>
+            <div class="icon-medals icon-medals-hide"></div>
+            <div class="icon-medals icon-medals-hide"></div>
+            <div class="icon-medals icon-medals-hide"></div>
+
+        </div>
         <div class="footer">
             <ul class="mune">
                 <li><i class="icon icon-top icon-index"></i></li>
                 <li><i class="icon icon-top icon-date"></i></li>
-                <li><i class="icon icon-top icon-ranking"></i></li>
+                <li><i class="icon icon-top icon-ranking active"></i></li>
                 <li><i class="icon icon-top icon-user "></i></li>
 
             </ul>
@@ -53,5 +48,8 @@
     $(".icon").click(function () {
         $(this).addClass("active");
     });
+
+    var __height = $(".icon-medals").width() / 128 * 144;
+    $(".icon-medals").height(__height);
 </script>
 </html>

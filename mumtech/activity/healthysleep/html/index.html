@@ -12,33 +12,98 @@
 <div class="container">
     <div class="main index">
         <div class="logo"></div>
-        <div class="slogan"><div class="see-detail">查看活动细则</div></div>
+        <div class="slogan">
+            <div class="see-detail">查看活动细则</div>
+        </div>
 
         <div class="join"></div>
         <div class="cloud"></div>
     </div>
 
-    <div class="alert">
+    <div class="alert" id="is-sub">
         <div class="alert-b">
         </div>
         <div class="alert-m">
-            <img src="../images/index/qrcode.png"/>
+            <img src="../images/qrcode.png"/>
             <div class="btn" onclick="javascript:location.href='sign-day.html'"></div>
-            <div class="msg" >注：关注公众号参与活动</div>
+            <div class="msg">注：关注公众号参与活动</div>
+        </div>
+    </div>
+
+    <div class="alert" id="act-detail">
+        <div class="close"></div>
+        <img src="../images/act-detail.jpg" style="width: 100%;"/>
+    </div>
+
+    <div class="alert" style="display: none">
+        <div class="alert-b"></div>
+        <div class="load"></div>
+    </div>
+
+    <div class="alert" id="alert-join">
+        <div class="alert-b">
+        </div>
+        <div class="alert-m">
+            <div id="ck-pregnant">
+                <button class="ck-button" id="ck-is">我是孕妇</button>
+                <button class="ck-button" id="ck-not">我不是孕妇</button>
+            </div>
+
+            <div class="pregnant" id="pregnant">
+                <h2>您的预产期是</h2>
+                <div><input class="pre-date" type="text" id="dueDate"/></div>
+                <button class="join-singin-button" id="btn-is"> 确&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;定</button>
+            </div>
+            <div class="pregnant" id="notpregnant">
+                <h3>感谢参加</h3>
+                <p>这里是提示</p>
+                <button class="join-singin-button" id="btn-not"> 确&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;定</button>
+            </div>
         </div>
     </div>
 </div>
 </body>
 
 <script src="../../common/zepto.min.js"></script>
-<script src="../js/healthysleep.js"></script>
+<script src="../js/healthysleep.js?v=1"></script>
 <script>
     $(".join").click(function () {
-        $(".alert").show();
+        // $("#alert-join").show();
+        $("#is-sub").show();
+    });
+
+    var isPregnant = false;
+    $("#ck-is").click(function () {
+        isPregnant = true;
+        $("#ck-pregnant").hide();
+        $("#pregnant").show();
+    });
+    $("#ck-not").click(function () {
+        isPregnant = false;
+        $("#ck-pregnant").hide();
+        $("#notpregnant").show();
+    });
+
+    $("#btn-is").click(function () {
+        var dueDate = $("#dueDate").val();
+        $.ajax({
+            url: 'join.html', dataType: 'json', data: {fui: 0, isPregnant: isPregnant, dueDate: dueDate},
+            success: function (data) {
+                console.log(data);
+                location.href = "signin.html";
+            }
+        });
+    });
+
+    $("#btn-not").click(function () {
+        location.href = "signin.html";
     });
 
     $(".see-detail").click(function () {
-        alert("show detai!");
+        // $("#act-detail").show();
+        $("#is-sub").show();
     });
+
+
 </script>
 </html>
