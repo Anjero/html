@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>健康睡眠打卡</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../../common/reset.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+</head>
+<body>
+<div class="container sf">
+    <div class="main index"></div>
+    <div class="alert" id="sleep-status">
+        <div class="alert-b">
+        </div>
+        <div class="alert-m choose-status">
+            <div class="alert-choose">
+                <div class="title"></div>
+                <div class="choose">
+                    <div class="active" data-content="good"><i class="icon-i icon-good"></i><span>非常好</span></div>
+                    <div  data-content="normal"><i class="icon-i icon-normal"></i>一般般</div>
+                    <div data-content="bad"><i class="icon-i icon-bad"></i>失眠了</div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="footer-btn">
+                <div class="send-btn">确定</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="../../common/zepto.min.js"></script>
+<script src="../js/healthysleep.js?v=1"></script>
+<script>
+    var _width = $(".container").width();
+    $(".footer-btn").css("margin-left", _width / 2 - 35);
+
+    $(".choose div").click(function () {
+        $(".choose div").removeClass("active");
+        $(this).addClass("active")
+    });
+    $(".send-btn").click(function () {
+        var _status = $(".choose .active").attr("data-content");
+        alert(_status);
+    });
+</script>
+</html>

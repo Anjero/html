@@ -9,33 +9,34 @@
     <link rel="stylesheet" href="../css/style.min.css">
 </head>
 <body>
-<div class="container">
+<div class="container sf">
     <div class="main sign sign-day">
 
         <div class="night-bg">
             <div class="logo"></div>
             <div class="header">
                 <div class="time icons">
-                    <div class="icon time-1"></div>
-                    <div class="icon time-2"></div>
-                    <div class="icon time-s"></div>
-                    <div class="icon time-3"></div>
-                    <div class="icon time-4"></div>
+                    <i class="icon-i icon-1"></i>
+                    <i class="icon-i icon-2"></i>
+                    <i class="icon-i icon-s"></i>
+                    <i class="icon-i icon-4"></i>
+                    <i class="icon-i icon-5"></i>
                 </div>
                 <div class="right icons">
-                    <div class="icon sun"></div>
-                    <div class="icon ap"></div>
+                    <div class="icon-i icon-sun"></div>
+                    <div class="icon-i icon-am"></div>
                 </div>
             </div>
         </div>
-        <div class=" join-singin"></div>
-
+        <div class="join-singin-div">
+            <div class=" join-singin"></div>
+        </div>
         <div class="footer">
             <ul class="mune">
-                <li><i class="icon icon-top icon-index"></i></li>
-                <li><i class="icon icon-top icon-date"></i></li>
-                <li><i class="icon icon-top icon-ranking"></i></li>
-                <li><i class="icon icon-top icon-user "></i></li>
+                <li><i class="icon-i icon-foot-index active"></i></li>
+                <li><i class="icon-i icon-foot-c"></i></li>
+                <li><i class="icon-i  icon-foot-r"></i></li>
+                <li><i class="icon-i  icon-foot-u "></i></li>
 
             </ul>
         </div>
@@ -50,7 +51,7 @@
         $(".alert").show();
     });
 
-    $(".icon").click(function () {
+    $(".mune .icon-i").click(function () {
         $(this).addClass("active");
     });
 </script>

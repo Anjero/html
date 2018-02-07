@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>健康睡眠打卡</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../../common/reset.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+</head>
+<body>
+<div class="container sf">
+    <div class="main draw">
+        <img src="../images/new/draw/top.jpg">
+        <div class="draw-wheel">
+            <div class="draw-gift" id="draw-gift"></div>
+            <div class="draw-btn"></div>
+        </div>
+
+        <div class="draw-share-counts">您今天还有 <i class="icon-i icon-1"></i> 次抽奖机会</div>
+        <div class="draw-share-desc">分享至朋友圈可再次获得抽奖机会</div>
+        <!--<div class="share-btn"></div>-->
+        <div class="draw-share-remark">
+            <h3>抽奖规则</h3>
+            <p>
+                1.每人一次抽奖机会，分享后可再次获得一次抽奖机会<br/>
+                2.抽中积分系统将自动添加<br/>
+                3.每日抽奖次数于次日00:00点全部清零<br/>
+                4.分享朋友圈获得抽奖次数每日仅限一次<br/>
+            </p>
+        </div>
+    </div>
+
+    <div class="alert" style="display: block;" id="draw-end">
+        <div class="alert-b"></div>
+        <div class="close"></div>
+        <div class="draw-end">
+            <h3>恭喜您获得了<span>100积分</span></h3>
+            <img src="../images/new/bg/draw-end.png" style="width: 100%;"/>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="../../common/zepto.min.js"></script>
+<script src="../js/healthysleep.js?v=1"></script>
+<script>
+    var _width = $(".draw-wheel").width();
+    $(".draw-btn").css("left", (_width / 2) - 47);
+
+
+    var draw = 0;
+    var syncend = false;
+    $(".draw-btn").click(function () {
+        var numm = 0;
+        var endnum = 0;
+        var begin = setInterval(function () {
+            numm++;
+            if (numm >= 360) {
+                numm = 0;
+                if (syncend) {
+                    clearInterval(begin);//清除此进程
+                    var draw_alert = setInterval(function () {
+
+                        if (endnum == 36 * draw) {
+                            clearInterval(draw_alert);//清除此进程
+                        }
+                        endnum++;
+                        $("#draw-gift").css("transform", "rotate(" + endnum + "deg)");
+                    }, 10);
+
+                }
+            }
+            $("#draw-gift").css("transform", "rotate(" + numm + "deg)");
+        }, 2)
+
+        var syncing = setInterval(function () {
+            syncend = true;
+            draw = 4;
+            clearInterval(syncing);
+        }, 4);
+    });
+
+</script>
+</html>
